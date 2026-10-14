@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-const { ipcRenderer } = window.require('electron');
+const { ipcRenderer, remote } = window.require('electron');
 import CategoryIcon from './shared/CategoryIcon';
 import './PlayerWindow.css';
 
@@ -21,6 +21,12 @@ function PlayerWindow() {
     };
   }, []);
 
+  const handleClose = () => {
+    const { BrowserWindow } = remote;
+    const window = BrowserWindow.getFocusedWindow();
+    window.close();
+  };
+
   const { items, discount, pricingMode } = cartData;
   const subtotal = items.reduce((sum, item) => sum + item.price, 0);
   const discountAmount = subtotal * (discount / 100);
@@ -28,6 +34,7 @@ function PlayerWindow() {
 
   return (
     <div className="player-window">
+      <button className="player-close-button" onClick={handleClose}>✕</button>
       <div className="cart-container">
         <div className="cart-table-header">
           <div className="cart-row-icon">Icon</div>

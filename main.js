@@ -30,14 +30,15 @@ function createPlayerWindow() {
   playerWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
     },
     title: 'Player View',
-    fullscreen: true,
   });
 
+  playerWindow.maximize();
   playerWindow.loadFile('player.html');
 
   playerWindow.on('closed', () => {
