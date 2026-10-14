@@ -12,11 +12,34 @@ export function parseInventoryCSV() {
       return [];
     }
 
-    const headers = lines[0].split(',').map(h => h.trim());
+    // Parse CSV handling quoted fields
+    const parseCSVLine = (line) => {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          result.push(current.trim());
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      result.push(current.trim());
+      
+      return result;
+    };
+
+    const headers = parseCSVLine(lines[0]);
     const items = [];
 
     for (let i = 1; i < lines.length; i++) {
-      const values = lines[i].split(',').map(v => v.trim());
+      const values = parseCSVLine(lines[i]);
       
       if (values.length === headers.length) {
         const item = {};
@@ -45,8 +68,12 @@ export function filterInventory(items, filters) {
 
   return items.filter(item => {
     // Search term filter (partial match on Item Description)
-    if (searchTerm && !item['Item'].toLowerCase().includes(searchTerm.toLowerCase())) {
-      return false;
+    if (searchTerm && searchTerm.trim() !== '') {
+      const itemText = (item['Item'] || '').toLowerCase();
+      const searchLower = searchTerm.toLowerCase().trim();
+      if (!itemText.includes(searchLower)) {
+        return false;
+      }
     }
 
     // Magic filter
