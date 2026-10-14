@@ -4,3 +4,11 @@
   height: 100vh;
   background-color: #ffffff;
 }
+
+.dm-top-section {
+  -webkit-app-region: drag;
+}
+
+.dm-top-section * {
+  -webkit-app-region: no-drag;
+}

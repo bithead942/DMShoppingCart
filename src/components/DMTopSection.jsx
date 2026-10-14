@@ -1,7 +1,14 @@
 import React from 'react';
+const { remote } = window.require('electron');
 import './DMTopSection.css';
 
 function DMTopSection({ pricingMode, setPricingMode, locale, setLocale, discount, setDiscount }) {
+  const handleClose = () => {
+    const { BrowserWindow } = remote;
+    const window = BrowserWindow.getFocusedWindow();
+    window.close();
+  };
+
   return (
     <div className="dm-top-section">
       <div className="dm-top-option">
@@ -32,6 +39,8 @@ function DMTopSection({ pricingMode, setPricingMode, locale, setLocale, discount
           <option value="50">50%</option>
         </select>
       </div>
+
+      <button className="close-button" onClick={handleClose}>✕</button>
     </div>
   );
 }

@@ -5,6 +5,7 @@
   background-color: #f0f0f0;
   border-bottom: 2px solid #ccc;
   align-items: center;
+  position: relative;
 }
 
 .dm-top-option {
@@ -22,4 +23,27 @@
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.close-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-app-region: no-drag;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
 }

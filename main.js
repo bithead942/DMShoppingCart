@@ -8,6 +8,7 @@ function createDMWindow() {
   dmWindow = new BrowserWindow({
     width: 1400,
     height: 900,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
