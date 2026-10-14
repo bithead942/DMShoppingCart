@@ -1,0 +1,35 @@
+.cart-row {
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr 1fr 1fr 150px;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+
+.cart-row-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-row-description {
+  font-weight: 500;
+}
+
+.cart-row-quantity,
+.cart-row-unit-price,
+.cart-row-price {
+  text-align: right;
+}
+
+.cart-row-actions {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.cart-row-actions button {
+  padding: 5px 10px;
+  cursor: pointer;
+}

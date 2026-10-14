@@ -1,0 +1,110 @@
+.player-window {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../img/player-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.cart-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.cart-table-header {
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.cart-items {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.cart-row-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-row-description {
+  font-weight: 500;
+}
+
+.cart-row-quantity,
+.cart-row-unit-price,
+.cart-row-price {
+  text-align: right;
+  font-weight: 500;
+}
+
+.empty-cart {
+  padding: 40px;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.cart-summary {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.summary-row.discount {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 24px;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  padding-top: 15px;
+  margin-top: 10px;
+  color: #1a1a1a;
+}

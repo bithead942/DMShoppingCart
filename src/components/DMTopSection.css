@@ -1,0 +1,25 @@
+.dm-top-section {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ccc;
+  align-items: center;
+}
+
+.dm-top-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dm-top-option label {
+  font-weight: bold;
+}
+
+.dm-top-option select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
