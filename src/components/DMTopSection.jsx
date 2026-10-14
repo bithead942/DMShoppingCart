@@ -4,9 +4,8 @@ import './DMTopSection.css';
 
 function DMTopSection({ pricingMode, setPricingMode, locale, setLocale, discount, setDiscount }) {
   const handleClose = () => {
-    const { BrowserWindow } = remote;
-    const window = BrowserWindow.getFocusedWindow();
-    window.close();
+    const { app } = remote;
+    app.quit();
   };
 
   return (

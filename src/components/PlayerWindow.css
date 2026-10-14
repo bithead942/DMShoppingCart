@@ -9,30 +9,6 @@
   justify-content: center;
   align-items: center;
   padding: 40px;
-  position: relative;
-}
-
-.player-close-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-  font-size: 24px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  transition: background-color 0.3s;
-}
-
-.player-close-button:hover {
-  background-color: rgba(255, 255, 255, 1);
 }
 
 .cart-container {
