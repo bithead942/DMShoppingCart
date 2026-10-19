@@ -8,13 +8,13 @@ let inventoryData = [];
 
 function parseInventoryCSV() {
   try {
-    // In development, use the CSV from the project root
-    // In production, use the CSV from the app directory
+    // In development, use the CSV from the project root (same directory as main.js)
+    // In production, use the CSV from the asar (files array)
     let csvPath;
     if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
-      csvPath = path.join(path.dirname(__dirname), 'Item Inventory List.csv');
+      csvPath = path.join(__dirname, 'Item Inventory List.csv');
     } else {
-      csvPath = path.join(path.dirname(app.getAppPath()), 'Item Inventory List.csv');
+      csvPath = path.join(__dirname, 'Item Inventory List.csv');
     }
     
     if (!fs.existsSync(csvPath)) {
@@ -97,7 +97,7 @@ function createDMWindow() {
   });
 
   // In development, load from project root
-  // In production, load from the app's resources
+  // In production, load from the asar (files array)
   let indexPath;
   if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
     indexPath = path.join(__dirname, 'index.html');
@@ -143,7 +143,7 @@ function createPlayerWindow() {
   playerWindow.maximize();
   
   // In development, load from project root
-  // In production, load from the app's resources
+  // In production, load from the asar (files array)
   let indexPath;
   if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
     indexPath = path.join(__dirname, 'player.html');
