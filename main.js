@@ -8,7 +8,20 @@ let inventoryData = [];
 
 function parseInventoryCSV() {
   try {
-    const csvPath = path.join(__dirname, 'Item Inventory List.csv');
+    // In development, use the CSV from the project root
+    // In production, use the CSV from the app directory
+    let csvPath;
+    if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
+      csvPath = path.join(path.dirname(__dirname), 'Item Inventory List.csv');
+    } else {
+      csvPath = path.join(path.dirname(app.getAppPath()), 'Item Inventory List.csv');
+    }
+    
+    if (!fs.existsSync(csvPath)) {
+      console.error('CSV file not found at:', csvPath);
+      return [];
+    }
+    
     const data = fs.readFileSync(csvPath, 'utf8');
     const lines = data.split('\n').filter(line => line.trim());
 
@@ -63,11 +76,19 @@ function parseInventoryCSV() {
 }
 
 function createDMWindow() {
+  // Determine icon path
+  let iconPath;
+  if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
+    iconPath = path.join(__dirname, 'Logo.ico');
+  } else {
+    iconPath = path.join(process.resourcesPath, 'Logo.ico');
+  }
+
   dmWindow = new BrowserWindow({
     width: 1400,
     height: 900,
     frame: false,
-    icon: path.join(__dirname, 'Logo.ico'),
+    icon: iconPath,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -75,7 +96,16 @@ function createDMWindow() {
     title: 'DM Shopping Cart',
   });
 
-  dmWindow.loadFile('index.html');
+  // In development, load from project root
+  // In production, load from the app's resources
+  let indexPath;
+  if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
+    indexPath = path.join(__dirname, 'index.html');
+  } else {
+    indexPath = path.join(__dirname, 'index.html');
+  }
+  
+  dmWindow.loadFile(indexPath);
 
   dmWindow.once('ready-to-show', () => {
     dmWindow.focus();
@@ -90,11 +120,19 @@ function createDMWindow() {
 }
 
 function createPlayerWindow() {
+  // Determine icon path
+  let iconPath;
+  if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
+    iconPath = path.join(__dirname, 'Logo.ico');
+  } else {
+    iconPath = path.join(process.resourcesPath, 'Logo.ico');
+  }
+
   playerWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
     frame: false,
-    icon: path.join(__dirname, 'Logo.ico'),
+    icon: iconPath,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -103,7 +141,17 @@ function createPlayerWindow() {
   });
 
   playerWindow.maximize();
-  playerWindow.loadFile('player.html');
+  
+  // In development, load from project root
+  // In production, load from the app's resources
+  let indexPath;
+  if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
+    indexPath = path.join(__dirname, 'player.html');
+  } else {
+    indexPath = path.join(__dirname, 'player.html');
+  }
+  
+  playerWindow.loadFile(indexPath);
 
   // Auto-maximize after move/drag
   playerWindow.on('move', () => {
@@ -233,12 +281,23 @@ ipcMain.on('load-cart', (event, filePath) => {
     const headers = lines[0].split(',').map(h => h.trim());
     const cartItems = [];
     let pricingMode = 'Sale';
+    let discount = 0;
 
     for (let i = 1; i < lines.length; i++) {
       const values = lines[i].split(',').map(v => v.trim());
 
-      // Skip summary rows
-      if (values[0] === 'Subtotal' || values[0] === 'Discount' || values[0] === 'Total') {
+      // Parse discount from Discount summary row
+      if (values[0].startsWith('Discount')) {
+        const discountMatch = values[0].match(/\((\d+)%\)/);
+        if (discountMatch) {
+          discount = parseFloat(discountMatch[1]);
+          console.log('Loaded discount:', discount);
+        }
+        continue;
+      }
+
+      // Skip other summary rows
+      if (values[0] === 'Subtotal' || values[0] === 'Total') {
         continue;
       }
 
@@ -260,7 +319,7 @@ ipcMain.on('load-cart', (event, filePath) => {
       }
     }
 
-    event.reply('cart-loaded', { success: true, cartItems, pricingMode });
+    event.reply('cart-loaded', { success: true, cartItems, pricingMode, discount });
   } catch (error) {
     console.error('Error loading cart:', error);
     event.reply('cart-loaded', { success: false, error: error.message });

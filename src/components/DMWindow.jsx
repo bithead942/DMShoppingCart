@@ -44,9 +44,13 @@ function DMWindow() {
     setEditingItem(null);
   };
 
-  const handleLoadCart = (items, mode) => {
+  const handleLoadCart = (items, mode, loadedDiscount) => {
     setCartItems(items);
     setPricingMode(mode);
+    if (loadedDiscount !== undefined && loadedDiscount !== null) {
+      console.log('Setting discount to:', loadedDiscount);
+      setDiscount(loadedDiscount);
+    }
   };
 
   return (

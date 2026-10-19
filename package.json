@@ -43,8 +43,12 @@
     "files": [
       "main.js",
       "package.json",
+      "index.html",
+      "player.html",
       "dist/**/*",
-      "node_modules/**/*"
+      "node_modules/**/*",
+      "Item Inventory List.csv",
+      "Logo.ico"
     ],
     "win": {
       "target": "nsis",

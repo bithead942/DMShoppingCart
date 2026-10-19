@@ -95,6 +95,7 @@ function DMBottomSection({
       setPriceOverride(editingItem.unitPrice.toString());
       setCategoryValue(editingItem.category || '');
       setDescriptionValue('');
+      setSearchTerm(editingItem.description || '');
       setSelectedItem(null);
     }
   }, [editingItem]);
@@ -203,7 +204,7 @@ function DMBottomSection({
 
     const handleLoadCartResponse = (event, result) => {
       if (result.success) {
-        onLoadCart(result.cartItems, result.pricingMode);
+        onLoadCart(result.cartItems, result.pricingMode, result.discount);
         dialog.showMessageBox({
           type: 'info',
           title: 'Cart Loaded',
