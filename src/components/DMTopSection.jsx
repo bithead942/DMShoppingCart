@@ -1,11 +1,10 @@
 import React from 'react';
-const { remote } = window.require('electron');
+const { ipcRenderer } = window.require('electron');
 import './DMTopSection.css';
 
 function DMTopSection({ pricingMode, setPricingMode, locale, setLocale, discount, setDiscount }) {
   const handleClose = () => {
-    const { app } = remote;
-    app.quit();
+    ipcRenderer.send('close-app');
   };
 
   return (
@@ -13,8 +12,8 @@ function DMTopSection({ pricingMode, setPricingMode, locale, setLocale, discount
       <div className="dm-top-option">
         <label>Pricing Mode:</label>
         <select value={pricingMode} onChange={(e) => setPricingMode(e.target.value)}>
-          <option value="Sale">Sale (Selling to Player)</option>
-          <option value="Resale">Resale (Buying from Player)</option>
+          <option value="Sale">Selling to Player</option>
+          <option value="Resale">Buying from Player</option>
         </select>
       </div>
 

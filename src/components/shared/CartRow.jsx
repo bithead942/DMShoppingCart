@@ -10,14 +10,14 @@ function CartRow({ item, onEdit, onDelete, isReadOnly = false }) {
       </div>
       <div className="cart-row-description">{item.description}</div>
       <div className="cart-row-quantity">{item.quantity}</div>
-      <div className="cart-row-unit-price">${item.unitPrice.toFixed(2)}</div>
-      <div className="cart-row-price">${item.price.toFixed(2)}</div>
-      {!isReadOnly && (
+      <div className="cart-row-unit-price">${item.unitPrice.toFixed(2)} gp</div>
+      <div className="cart-row-price">${item.price.toFixed(2)} gp</div>
+      
         <div className="cart-row-actions">
-          <button onClick={() => onEdit(item)}>Edit</button>
-          <button onClick={() => onDelete(item.id)}>Delete</button>
+          <button className="edit-btn" onClick={() => onEdit(item)}><img src="img/pencil-solid.png" alt="Edit" height="20px" width="20px" /></button>
+          <button className="delete-btn" onClick={() => onDelete(item.id)}><img src="img/trash-solid.png" alt="Delete" height="20px" width="20px" /></button>
         </div>
-      )}
+   
     </div>
   );
 }

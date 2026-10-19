@@ -2,8 +2,8 @@ import React from 'react';
 import './CategoryIcon.css';
 
 function CategoryIcon({ category }) {
-  const iconPath = `../../img/${category}.png`;
-  
+  const iconPath = `./img/${category}.png`;
+
   return (
     <img
       src={iconPath}

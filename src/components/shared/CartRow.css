@@ -1,35 +1,64 @@
 .cart-row {
-  display: grid;
-  grid-template-columns: 50px 2fr 1fr 1fr 1fr 150px;
+  display: flex !important;
+  flex-wrap: nowrap !important;
   gap: 10px;
-  padding: 10px;
+  padding: 8px;
   border-bottom: 1px solid #ccc;
   align-items: center;
 }
 
 .cart-row-icon {
-  display: flex;
+    flex: 0 0 50px !important;        /* Fixed 50px width, won't grow, won't shrink */
   justify-content: center;
   align-items: center;
 }
 
 .cart-row-description {
   font-weight: 500;
+    flex: 1.5 1 0% !important;        /* Takes up 1.5 shares of remaining space */
+  min-width: 0;          /* Prevents long text from breaking the layout */
 }
 
 .cart-row-quantity,
 .cart-row-unit-price,
 .cart-row-price {
   text-align: right;
+    flex: 1 1 0% !important;          /* Takes up 1 share of remaining space each */
+  min-width: 0 !important;
 }
 
 .cart-row-actions {
-  display: flex;
+  display: flex !important;
+  flex: 0 0 100px !important;        /* Fixed width for buttons so they never squeeze or wrap */
   gap: 5px;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .cart-row-actions button {
-  padding: 5px 10px;
+  padding: 4px 8px;
   cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.edit-btn:hover {
+  background-color: #0b7dda;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
 }

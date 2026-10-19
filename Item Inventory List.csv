@@ -1,11 +1,11 @@
 Item,Retail Price,Resale Price,Magic,Consumable,Category,Rural Locale,Urban Locale,Premium Locale,Description
-Ammunition +1 each,25,12.5,Yes,Yes,Ammunition,,X,X,
-Ammunition +2 ea,100,50,Yes,Yes,Ammunition,,X,X,
-Ammunition +3 ea,400,200,Yes,Yes,Ammunition,,X,X,
-Ammunition - silver,1gp,0.5,No,Yes,Ammunition,X,X,X,
-Ammunition - poison,1gp,0.5,No,Yes,Ammunition,X,X,X,
-Ammunition - Holy Water,1gp,0.5,No,Yes,Ammunition,X,X,X,
-Arrow of Slaying (ea),600,300,Yes,Yes,Ammunition,,X,X,
+Ammunition +1,25,12.5,Yes,Yes,Ammunition,,X,X,each
+Ammunition +2,100,50,Yes,Yes,Ammunition,,X,X,each
+Ammunition +3,400,200,Yes,Yes,Ammunition,,X,X,each
+Ammunition - silver,3,1.5,No,Yes,Ammunition,X,X,X,each
+Ammunition - poison,3,1.5,No,Yes,Ammunition,X,X,X,each
+Ammunition - Holy Water,1,0.5,No,Yes,Ammunition,X,X,X,each
+Arrow of Slaying,600,300,Yes,Yes,Ammunition,,X,X,each
 Bead of Force,960,480,Yes,Yes,Jewlery,,,X,
 Chime of Opening,1500,750,Yes,Yes,Entertainment,,X,X,
 Deck of Illusions,6120,3060,Yes,Yes,Entertainment,,,X,
@@ -18,7 +18,7 @@ Gem of Brightness,5000,2500,Yes,Yes,Jewlery,,,X,
 Horn of Blasting,450,225,Yes,Yes,Entertainment,,X,X,
 Ioun Stone Absorption,2400,1200,Yes,Yes,Magic,,,X,
 Ioun Stone Greater Absorption,31000,15500,Yes,Yes,Magic,,,X,
-Keoghtom's Ointment (per dose),120,60,Yes,Yes,Magic,,,X,
+Keoghtom's Ointment (per dose),120,60,Yes,Yes,Magic,,,X,Per dose
 Necklace of Fireballs (1 bead),300,150,Yes,Yes,Jewlery,,,X,
 Necklace of Fireballs (2 beads),480,240,Yes,Yes,Jewlery,,,X,
 Necklace of Fireballs (3 beads),960,480,Yes,Yes,Jewlery,,,X,
@@ -59,16 +59,16 @@ Quaal's Feather Token Whip,250,125,Yes,Yes,Magic,,,X,
 Rod of Absorption,50000,25000,Yes,Yes,Magic,,,X,
 Scroll of Protection,180,90,Yes,Yes,Scroll,,X,X,
 Sovereign Glue,400,200,Yes,Yes,Magic,,,X,
-Spell Scroll (0),10,5,Yes,Yes,Scroll,,X,X,
-Spell Scroll (1),60,30,Yes,Yes,Scroll,,X,X,
-Spell Scroll (2),120,60,Yes,Yes,Scroll,,X,X,
-Spell Scroll (3),200,100,Yes,Yes,Scroll,,X,X,
-Spell Scroll (4),320,160,Yes,Yes,Scroll,,X,X,
-Spell Scroll (5),640,320,Yes,Yes,Scroll,,,X,
-Spell Scroll (6),1280,640,Yes,Yes,Scroll,,,X,
-Spell Scroll (7),2560,1280,Yes,Yes,Scroll,,,X,
-Spell Scroll (8),5120,2560,Yes,Yes,Scroll,,,X,
-Spell Scroll (9),10240,5120,Yes,Yes,Scroll,,,X,
+Spell Scroll (Level 0),10,5,Yes,Yes,Scroll,X,X,X,
+Spell Scroll (Level 1),60,30,Yes,Yes,Scroll,X,X,X,
+Spell Scroll (Level 2),120,60,Yes,Yes,Scroll,,X,X,
+Spell Scroll (Level 3),200,100,Yes,Yes,Scroll,,X,X,
+Spell Scroll (Level 4),320,160,Yes,Yes,Scroll,,X,X,
+Spell Scroll (Level 5),640,320,Yes,Yes,Scroll,,,X,
+Spell Scroll (Level 6),1280,640,Yes,Yes,Scroll,,,X,
+Spell Scroll (Level 7),2560,1280,Yes,Yes,Scroll,,,X,
+Spell Scroll (Level 8),5120,2560,Yes,Yes,Scroll,,,X,
+Spell Scroll (Level 9),10240,5120,Yes,Yes,Scroll,,,X,
 Talisman of Pure Good,71680,35840,Yes,No,Magic,,,X,
 Talisman of Ultimate Evil,61440,30720,Yes,No,Magic,,,X,
 Universal Solvent,300,150,Yes,No,Magic,,,X,
@@ -84,8 +84,8 @@ Belt of Dwarvenkind,6000,3000,Yes,No,Armor,,,X,
 Boots of Speed,4000,2000,Yes,No,Armor,,,X,
 Bracers of Archery,1500,750,Yes,No,Armor,,X,X,
 Bracers of Defense,6000,3000,Yes,No,Armor,,,X,
-Brooch of Shielding,7500,3750,Yes,No,Armor,,,X,
-Circlet of Blasting,1500,750,Yes,No,Armor,,X,X,
+Brooch of Shielding,7500,3750,Yes,No,Jewlery,,,X,
+Circlet of Blasting,1500,750,Yes,No,Jewlery,,X,X,
 Cloak of Displacement,60000,30000,Yes,No,Armor,,,X,
 Cloak of Protection,3500,1750,Yes,No,Armor,,X,X,
 Dagger of Venom,2500,1250,Yes,No,Weapon,,,X,
@@ -96,9 +96,9 @@ Frost Brand,2200,1100,Yes,No,Armor,,,X,
 Gauntlets of Ogre Power,8000,4000,Yes,No,Armor,,,X,
 Giant Slayer,7000,3500,Yes,No,Weapon,,,X,
 Gloves of Missile Snaring,3000,1500,Yes,No,Armor,,,X,
-Hammer of Thunderbolts,16000,8000,Yes,No,Armor,,,X,
+Hammer of Thunderbolts,16000,8000,Yes,No,Weapon,,,X,
 Headband of Intellect,8000,4000,Yes,No,Armor,,,X,
-Holy Avenger,165000,82500,Yes,No,Armor,,,X,
+Holy Avenger,165000,82500,Yes,No,Weapon,,,X,
 Instrument of the Bards - Anstruth Harp,109000,54500,Yes,No,Entertainment,,,X,
 Instrument of the Bards - Canaith Mandolin,30000,15000,Yes,No,Entertainment,,,X,
 Instrument of the Bards - Cli Lyre,35000,17500,Yes,No,Entertainment,,,X,
@@ -264,18 +264,18 @@ Armor +2,6000,3000,Yes,No,Armor,,,X,
 Armor +3,24000,12000,Yes,No,Armor,,,X,
 Armor of Invulnerability,18000,9000,Yes,No,Armor,,,X,
 Bronze Griffon,8000,4000,Yes,No,Magic,,,X,
-Broom of Flying,8000,4000,Yes,No,Transportation,,,X,
-Carpet of Flying,12000,6000,Yes,No,Transportation,,,X,
+Broom of Flying,8000,4000,Yes,No,Transport,,,X,
+Carpet of Flying,12000,6000,Yes,No,Transport,,,X,
 Cloak of Invisibility,80000,40000,Yes,No,Clothing,,,X,
 Crystal Ball,50000,25000,Yes,No,Magic,,,X,
 Cubic Gate,40000,20000,Yes,No,Magic,,,X,
 Daern's Instant Fortess,75000,37500,Yes,No,Lodging,,,X,
 Decanter of Endless Water,135000,67500,Yes,No,Container,,,X,
 Defender,24000,12000,Yes,No,Magic,,,X,
-Dwarven Plate,9000,4500,Yes,No,Armor,,,X,
+Dwarven Plate Armor,9000,4500,Yes,No,Armor,,,X,
 Ebony Fly,6000,3000,Yes,No,Magic,,,X,
 Helm of Teleportation,64000,32000,Yes,No,Armor,,,X,
-Obsidian Steed,128000,64000,Yes,No,Transportation,,,X,
+Obsidian Steed,128000,64000,Yes,No,Transport,,,X,
 Potion of Longevity,9000,4500,Yes,Yes,Potion,,,X,
 Ring of Air Elemental Command,35000,17500,Yes,No,Magic,,,X,
 Ring of Earth Elemental Command,31000,15500,Yes,No,Magic,,,X,
@@ -322,14 +322,14 @@ Lamp,0.5,0.25,No,No,Adventuring,X,X,X,
 "Lantern, bullseye",10,5,No,No,Adventuring,X,X,X,
 "Lantern, hooded",5,2.5,No,No,Adventuring,X,X,X,
 Mess kit,0.2,0.1,No,No,Adventuring,X,X,X,
-Piton / Pack of 10,0.5,0.25,No,yes,Adventuring,X,X,X,
+Piton / Pack of 10,0.5,0.25,No,yes,Adventuring,X,X,X,10 per pack
 Pole (10 foot),0.05,0.025,No,No,Adventuring,X,X,X,
-Rations ,0.5,0.25,No,yes,Food,X,X,X,
-"Rope, Hemp (50 ft)",1,0.5,No,No,Adventuring,X,X,X,
+Rations ,0.5,0.25,No,yes,Food,X,X,X,1 per day
+"Rope, Hemp (50 ft)",1,0.5,No,No,Adventuring,X,X,X,50 ft.
 Shovel,2,1,No,No,Adventuring,X,X,X,
 Pic Axe,1,0.5,No,No,Adventuring,X,X,X,
-"Spikes, iron (10)",1,0.5,No,yes,Adventuring,X,X,X,
-Tent (2 person),2,1,No,No,Adventuring,X,X,X,
+"Spikes, iron (10)",1,0.5,No,yes,Adventuring,X,X,X,10 per pack
+Tent,2,1,No,No,Adventuring,X,X,X,Fits 2 regular sized beings
 Tinderbox,0.5,0.25,No,Yes,Adventuring,X,X,X,
 Torch,0.01,0.005,No,Yes,Adventuring,X,X,X,
 Waterskin,0.2,0.1,No,No,Adventuring,X,X,X,
@@ -353,23 +353,23 @@ Book,25,12.5,No,No,Adventuring,X,X,X,
 Candle,0.01,0.005,No,Yes,Adventuring,X,X,X,
 "Case, scroll or map",1,0.5,No,No,Adventuring,X,X,X,
 Component pouch,25,12.5,No,Yes,Adventuring,X,X,X,
-Holy Water (flask),25,12.5,No,Yes,Adventuring,X,X,X,
-Ink (1 ounce bottle),10,5,No,Yes,Adventuring,X,X,X,
+Holy Water (flask),25,12.5,No,Yes,Adventuring,X,X,X,Includes flask
+Ink (1 ounce bottle),10,5,No,Yes,Adventuring,X,X,X,1 oz. bottle
 Ink pen,0.02,0.01,No,No,Adventuring,X,X,X,
-Oil (flask),0.1,0.05,No,Yes,Adventuring,X,X,X,
-Paper ( 1 sheet),0.2,0.1,No,No,Adventuring,X,X,X,
-Parchment (1 sheet),0.1,0.05,No,Yes,Adventuring,X,X,X,
+Oil (flask),0.1,0.05,No,Yes,Adventuring,X,X,X,Includes flask
+Paper ( 1 sheet),0.2,0.1,No,No,Adventuring,X,X,X,per sheet
+Parchment (1 sheet),0.1,0.05,No,Yes,Adventuring,X,X,X,per sheet
 Sealing wax,0.5,0.25,No,Yes,Adventuring,X,X,X,
 Spellbook,50,25,No,No,Adventuring,X,X,X,
 Vial,1,0.5,No,No,Adventuring,X,X,X,
 Abacus,2,1,No,No,Adventuring,X,X,X,
 Backpack,2,1,No,No,Adventuring,X,X,X,
-Ball bearings (bag of 1000),1,0.5,No,Yes,Adventuring,X,X,X,
+Ball bearings (bag of 1000),1,0.5,No,Yes,Adventuring,X,X,X,bag of 1000
 Barrel,2,1,No,No,Adventuring,X,X,X,
 Basket,0.4,0.2,No,No,Adventuring,X,X,X,
 Bell,1,0.5,No,No,Adventuring,X,X,X,
 Bucket,0.05,0.025,No,No,Adventuring,X,X,X,
-Chalk (1 piece),0.01,0.005,No,Yes,Adventuring,X,X,X,
+Chalk,0.01,0.005,No,Yes,Adventuring,X,X,X,1 piece
 Crowbar,2,1,No,No,Adventuring,X,X,X,
 Hammer,1,0.5,No,No,Adventuring,X,X,X,
 Sledge Hammer,2,1,No,No,Adventuring,,X,X,
@@ -408,18 +408,18 @@ Signet Ring,5,2.5,No,No,Jewlery,X,X,X,
 "Lodging, Aristocratic",4,,No,Yes,Lodging,,X,X,Per night
 "Lodging, Penthouse Suite",10,,No,Yes,Lodging,,X,X,Per night
 "Lodging, Stabling",0.5,,No,Yes,Lodging,,X,X,Per night
-"Coach, within city",0.01,0.005,No,Yes,Transportation,,X,X,per mile
-"Coach, between towns",0.03,0.015,No,Yes,Transportation,X,X,X,per mile
-Ship's passage,0.1,0.05,No,Yes,Transportation,X,X,X,per mile
-Road or gate toll,0.01,0.005,No,Yes,Transportation,X,X,X,per mile
+"Coach, within city",0.01,0.005,No,Yes,Transport,,X,X,per mile
+"Coach, between towns",0.03,0.015,No,Yes,Transport,X,X,X,per mile
+Ship's passage,0.1,0.05,No,Yes,Transport,X,X,X,per mile
+Road or gate toll,0.01,0.005,No,Yes,Transport,X,X,X,per mile
 "Hireling, Skilled",2,1,No,Yes,Labor,,X,X,per day
 "Hireling, Untrained",0.2,0.1,No,Yes,Labor,X,X,X,per day
 Messenger,0.02,0.01,No,Yes,Labor,X,X,X,per mile
-Donkey or mule,8,4,No,No,Transportation,X,X,X,"Speed 40, Capacity 420lbs"
-"Horse, draft",50,25,No,No,Transportation,,X,X,"Speed 40, Capacity 540lbs"
-"Horse, riding",75,37.5,No,No,Transportation,,X,X,"Speed 60, Capacity 480lbs"
-Pony,30,15,No,No,Transportation,X,X,X,"Speed 40, Capacity 225lbs"
-Warhorse,100,50,No,No,Transportation,,X,X,"Speed 60, Capacity 540lbs"
+Donkey or mule,8,4,No,No,Transport,X,X,X,"Speed 40, Capacity 420lbs"
+"Horse, draft",50,25,No,No,Transport,,X,X,"Speed 40, Capacity 540lbs"
+"Horse, riding",75,37.5,No,No,Transport,,X,X,"Speed 60, Capacity 480lbs"
+Pony,30,15,No,No,Transport,X,X,X,"Speed 40, Capacity 225lbs"
+Warhorse,100,50,No,No,Transport,,X,X,"Speed 60, Capacity 540lbs"
 Club,0.1,0.05,No,No,Weapon,X,X,X,
 Dagger,2,1,No,No,Weapon,X,X,X,
 Greatclub,0.2,0.1,No,No,Weapon,X,X,X,
@@ -452,17 +452,17 @@ Scimitar,25,12.5,No,No,Weapon,X,X,X,
 Short sword,10,5,No,No,Weapon,X,X,X,
 Trident,5,2.5,No,No,Weapon,X,X,X,
 War hammer,15,7.5,No,No,Weapon,X,X,X,
-Leather,10,5,No,No,Armor,X,X,X,
-Studded Leather,45,22.5,No,No,Armor,X,X,X,
-Hide,10,5,No,No,Armor,X,X,X,
-Chain shirt,50,25,No,No,Armor,X,X,X,
-Scale mail,50,25,No,No,Armor,X,X,X,
-Breast plate,400,200,No,No,Armor,X,X,X,
-Half plate,750,375,No,No,Armor,,X,X,
-Ring mail,30,15,No,No,Armor,X,X,X,
-Chain mail,75,37.5,No,No,Armor,X,X,X,
-Splint,200,100,No,No,Armor,X,X,X,
-Plate,1500,750,No,No,Armor,,X,X,
+Leather Armor,10,5,No,No,Armor,X,X,X,
+Studded Leather Armor,45,22.5,No,No,Armor,X,X,X,
+Hide Armor,10,5,No,No,Armor,X,X,X,
+Chain shirt Armor,50,25,No,No,Armor,X,X,X,
+Scale mail Armor,50,25,No,No,Armor,X,X,X,
+Breast plate Armor,400,200,No,No,Armor,X,X,X,
+Half plate Armor,750,375,No,No,Armor,,X,X,
+Ring mail Armor,30,15,No,No,Armor,X,X,X,
+Chain mail Armor,75,37.5,No,No,Armor,X,X,X,
+Splint Armor,200,100,No,No,Armor,X,X,X,
+Plate Armor,1500,750,No,No,Armor,,X,X,
 Shield,10,5,No,No,Armor,X,X,X,
 Scroll of Control Flame,15,7.5,Yes,Yes,Scroll,,X,X,
 Scroll of Firebolt,15,7.5,Yes,Yes,Scroll,,X,X,
@@ -507,8 +507,8 @@ Cheers - On Tap,10.75,,No,Yes,Food,,X,X,
 Cheers - Draft,10.75,,No,Yes,Food,,X,X,
 Cheers - Bottles,10.75,,No,Yes,Food,,X,X,
 Honeydew Mellon,0.5,,No,Yes,Food,X,X,X,
-Green Grapes (1lb),1,,No,Yes,Food,X,X,X,
-Red Cherries (1lb),1,,No,Yes,Food,X,X,X,
+Green Grapes,1,,No,Yes,Food,X,X,X,1 lbs
+Red Cherries,1,,No,Yes,Food,X,X,X,1 lbs
 Sweet Pears,0.5,,No,Yes,Food,X,X,X,
 Cosmic Apples,0.5,,No,Yes,Food,X,X,X,
 Peaches,0.5,,No,Yes,Food,X,X,X,
@@ -530,7 +530,7 @@ Premium Cider,2,,No,Yes,Food,X,X,X,
 Basic Ration,0.6,,No,Yes,Food,X,X,X,
 Premium Ration,1,,No,Yes,Food,X,X,X,
 Elite Ration,2,,No,Yes,Food,,X,X,+3 Temporary Hitpoints
-Lambas Bread (3 servings),1,,No,Yes,Food,,X,X,
+Lambas Bread,1,,No,Yes,Food,,X,X,3 servings
 Quest Bar,0.5,,No,Yes,Food,X,X,X,
 Tatoo - non-Magic,10,,No,No,Tatoo,X,X,X,
 Tatoo - Level 1 Magic,1000,,Yes,No,Tatoo,,X,X,

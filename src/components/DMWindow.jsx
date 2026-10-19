@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 const { ipcRenderer } = window.require('electron');
 import DMTopSection from './DMTopSection';
-import DMMiddleSection from './DMMiddleSection';
 import DMBottomSection from './DMBottomSection';
 import './DMWindow.css';
 
@@ -60,13 +59,6 @@ function DMWindow() {
         discount={discount}
         setDiscount={setDiscount}
       />
-      <DMMiddleSection
-        pricingMode={pricingMode}
-        locale={locale}
-        onAddToCart={handleAddToCart}
-        editingItem={editingItem}
-        onUpdateItem={handleUpdateItem}
-      />
       <DMBottomSection
         cartItems={cartItems}
         discount={discount}
@@ -75,6 +67,10 @@ function DMWindow() {
         onDeleteItem={handleDeleteItem}
         onClearCart={handleClearCart}
         onLoadCart={handleLoadCart}
+        onAddToCart={handleAddToCart}
+        editingItem={editingItem}
+        onUpdateItem={handleUpdateItem}
+        locale={locale}
       />
     </div>
   );
