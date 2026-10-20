@@ -6,7 +6,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && xcopy /Y /I img dist\\img",
     "dev": "webpack --mode development --watch",
     "package": "electron-builder"
   },
@@ -46,6 +46,7 @@
       "index.html",
       "player.html",
       "dist/**/*",
+      "img/**/*",
       "node_modules/**/*",
       "Item Inventory List.csv",
       "Logo.ico"

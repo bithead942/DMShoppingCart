@@ -6,7 +6,7 @@ import './DMWindow.css';
 
 function DMWindow() {
   const [pricingMode, setPricingMode] = useState('Sale');
-  const [locale, setLocale] = useState('Rural');
+  const [locale, setLocale] = useState('Urban');
   const [discount, setDiscount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [editingItem, setEditingItem] = useState(null);
@@ -42,6 +42,7 @@ function DMWindow() {
   const handleClearCart = () => {
     setCartItems([]);
     setEditingItem(null);
+    setDiscount(0);
   };
 
   const handleLoadCart = (items, mode, loadedDiscount) => {

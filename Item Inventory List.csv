@@ -532,11 +532,11 @@ Premium Ration,1,,No,Yes,Food,X,X,X,
 Elite Ration,2,,No,Yes,Food,,X,X,+3 Temporary Hitpoints
 Lambas Bread,1,,No,Yes,Food,,X,X,3 servings
 Quest Bar,0.5,,No,Yes,Food,X,X,X,
-Tatoo - non-Magic,10,,No,No,Tatoo,X,X,X,
-Tatoo - Level 1 Magic,1000,,Yes,No,Tatoo,,X,X,
-Tatoo - Level 2 Magic,4000,,Yes,No,Tatoo,,,X,
-Tatoo - Level 3 Magic,8000,,Yes,No,Tatoo,,,X,
-Tatoo Kit,,,No,Yes,Tools-Kits,,X,X,
+Tattoo - non-Magic,10,,No,No,Tattoo,X,X,X,
+Tattoo - Level 1 Magic,1000,,Yes,No,Tattoo,,X,X,
+Tattoo - Level 2 Magic,4000,,Yes,No,Tattoo,,,X,
+Tattoo - Level 3 Magic,8000,,Yes,No,Tattoo,,,X,
+Tattoo Kit,,,No,Yes,Tools-Kits,,X,X,
 Enchant Weapon +1,200,,Yes,Yes,Service,,X,X,10 days
 Enchant Weapon +2,2000,,Yes,Yes,Service,,,X,50 days
 Enchant Weapon +3,20000,,Yes,Yes,Service,,,X,125 days
